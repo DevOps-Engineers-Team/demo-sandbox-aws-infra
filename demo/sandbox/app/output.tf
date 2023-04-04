@@ -1,15 +1,3 @@
-# output "subnets_config" {
-#     value = module.default_vpc_subnets.subnets_config
-# }
-
-# output "subnets_ids" {
-#     value = values(module.default_vpc_subnets.subnets_config)
-# }
-
-# output "vpc_id" {
-#     value = module.default_vpc_subnets.vpc_id
-# }
-
-output "caller_config" {
-  value = data.aws_caller_identity.current
+output "elb_dns_name_to_check" {
+    value = module.alb.elb_dns_name
 }
